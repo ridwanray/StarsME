@@ -1,0 +1,404 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20191229.050637.32519.0.001.json",
+    "dumpEventTime": "2019-12-29T05:06:39Z",
+    "dumpEventTimeStamp": "1577592399903",
+    "processId": 32519,
+    "cwd": "/home/ahmnouira/Desktop/StarsME",
+    "commandLine": [
+      "/usr/bin/node",
+      "/home/ahmnouira/Desktop/StarsME/node_modules/jest-worker/build/workers/processChild.js"
+    ],
+    "nodejsVersion": "v12.13.0",
+    "glibcVersionRuntime": "2.23",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.13.0",
+      "v8": "7.7.299.13-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.15.0-72-generic",
+    "osVersion": "#81~16.04.1-Ubuntu SMP Tue Nov 26 16:34:21 UTC 2019",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM)2 Duo CPU     T6670  @ 2.20GHz",
+        "speed": 2200,
+        "user": 119629300,
+        "nice": 56200,
+        "sys": 39853000,
+        "idle": 256268100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM)2 Duo CPU     T6670  @ 2.20GHz",
+        "speed": 1683,
+        "user": 116485800,
+        "nice": 48300,
+        "sys": 40363800,
+        "idle": 256063800,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wls1",
+        "internal": false,
+        "mac": "e0:2a:82:1b:b8:ad",
+        "address": "192.168.1.4",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wls1",
+        "internal": false,
+        "mac": "e0:2a:82:1b:b8:ad",
+        "address": "fd10:b1f8:cb87:1200:4424:b20d:2581:c6fd",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wls1",
+        "internal": false,
+        "mac": "e0:2a:82:1b:b8:ad",
+        "address": "fd10:b1f8:cb87:1200:540d:a148:8b0:6084",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wls1",
+        "internal": false,
+        "mac": "e0:2a:82:1b:b8:ad",
+        "address": "fe80::511b:627:f25d:77c9",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 3
+      }
+    ],
+    "host": "PC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b027f5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x00000000009d9fc3",
+      "symbol": "node::OnFatalError(char const*, char const*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b37dbe",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b38139",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce34f5",
+      "symbol": " [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce3b86",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cefa1a",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf0925",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf3338",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cb9c67",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x0000000000fefb9b",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/bin/node]"
+    },
+    {
+      "pc": "0x00000000013725d9",
+      "symbol": " [/usr/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151243776,
+    "totalCommittedMemory": 2149441120,
+    "usedMemory": 2127940544,
+    "availableMemory": 48785832,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 1261776,
+        "capacity": 1047488,
+        "used": 212416,
+        "available": 835072
+      },
+      "old_space": {
+        "memorySize": 2014949376,
+        "committedMemory": 2014582120,
+        "capacity": 1994844344,
+        "used": 1994742168,
+        "available": 102176
+      },
+      "code_space": {
+        "memorySize": 1998848,
+        "committedMemory": 1696864,
+        "capacity": 1541856,
+        "used": 1541856,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1314816,
+        "committedMemory": 1246352,
+        "capacity": 937840,
+        "used": 937840,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 130572288,
+        "committedMemory": 130572288,
+        "capacity": 130470352,
+        "used": 130470352,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3616,
+        "used": 3616,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 279.042,
+    "kernelCpuSeconds": 9.02617,
+    "cpuConsumptionPercent": 96.0226,
+    "maxRss": 2258624512,
+    "pageFaults": {
+      "IORequired": 195,
+      "IONotRequired": 1104478
+    },
+    "fsActivity": {
+      "reads": 46160,
+      "writes": 24816
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 138.82,
+    "kernelCpuSeconds": 5.40843,
+    "cpuConsumptionPercent": 48.0762,
+    "fsActivity": {
+      "reads": 44488,
+      "writes": 12264
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "XDG_VTNR": "7",
+    "LC_PAPER": "en_GB.UTF-8",
+    "QT_DEVICE_PIXEL_RATIO": "auto",
+    "LC_ADDRESS": "en_GB.UTF-8",
+    "XDG_SESSION_ID": "c2",
+    "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/ahmnouira",
+    "LC_MONETARY": "en_GB.UTF-8",
+    "CLUTTER_IM_MODULE": "xim",
+    "SESSION": "ubuntu",
+    "GPG_AGENT_INFO": "/home/ahmnouira/.gnupg/S.gpg-agent:0:1",
+    "ANDROID_HOME": "/home/ahmnouira/Android/Sdk",
+    "TERM": "xterm-256color",
+    "VTE_VERSION": "4205",
+    "XDG_MENU_PREFIX": "gnome-",
+    "SHELL": "/bin/bash",
+    "QT_LINUX_ACCESSIBILITY_ALWAYS_ON": "1",
+    "WINDOWID": "62953313",
+    "LC_NUMERIC": "en_GB.UTF-8",
+    "UPSTART_SESSION": "unix:abstract=/com/ubuntu/upstart-session/1000/2413",
+    "GNOME_KEYRING_CONTROL": "",
+    "GTK_MODULES": "gail:atk-bridge:unity-gtk-module",
+    "USER": "ahmnouira",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "LC_TELEPHONE": "en_GB.UTF-8",
+    "QT_ACCESSIBILITY": "1",
+    "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+    "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "SESSION_MANAGER": "local/PC:@/tmp/.ICE-unix/2847,unix/PC:/tmp/.ICE-unix/2847",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg",
+    "DESKTOP_SESSION": "ubuntu",
+    "PATH": "/home/ahmnouira/Desktop/StarsME/node_modules/.bin:/home/ahmnouira/bin:/home/ahmnouira/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "QT_IM_MODULE": "ibus",
+    "QT_QPA_PLATFORMTHEME": "appmenu-qt5",
+    "LC_IDENTIFICATION": "en_GB.UTF-8",
+    "XDG_SESSION_TYPE": "x11",
+    "PWD": "/home/ahmnouira/Desktop/StarsME",
+    "JOB": "dbus",
+    "XMODIFIERS": "@im=ibus",
+    "LANG": "en_US.UTF-8",
+    "GNOME_KEYRING_PID": "",
+    "GDM_LANG": "en_US",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "LC_MEASUREMENT": "en_GB.UTF-8",
+    "COMPIZ_CONFIG_PROFILE": "ubuntu",
+    "IM_CONFIG_PHASE": "1",
+    "PAPERSIZE": "a4",
+    "GDMSESSION": "ubuntu",
+    "SESSIONTYPE": "gnome-session",
+    "GTK2_MODULES": "overlay-scrollbar",
+    "SHLVL": "1",
+    "HOME": "/home/ahmnouira",
+    "XDG_SEAT": "seat0",
+    "LANGUAGE": "en_US",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "LOGNAME": "ahmnouira",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "CLASSPATH": ".:/usr/share/java/mysql.jar",
+    "QT4_IM_MODULE": "xim",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:abstract=/tmp/dbus-x7uCskTKID",
+    "PT7HOME": "/opt/pt",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "INSTANCE": "",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "DISPLAY": ":0",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "GTK_IM_MODULE": "ibus",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "LC_TIME": "en_GB.UTF-8",
+    "LC_NAME": "en_GB.UTF-8",
+    "XAUTHORITY": "/home/ahmnouira/.Xauthority",
+    "_": "/usr/bin/ionic",
+    "IONIC_CLI_BIN": "/usr/lib/node_modules/ionic/bin/ionic",
+    "IONIC_CLI_LIB": "/usr/lib/node_modules/ionic",
+    "FORCE_COLOR": "1",
+    "WEBPACK_DEV_SERVER": "true",
+    "JEST_WORKER_ID": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 23208,
+      "hard": 23208
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
