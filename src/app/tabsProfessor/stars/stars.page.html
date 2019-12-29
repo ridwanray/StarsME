@@ -1,0 +1,43 @@
+<ion-header mode="ios">
+    <ion-toolbar mode="ios" color="light">
+      <ion-title mode="ios">Stars</ion-title>
+      <ion-buttons mode="ios" slot="end">
+          <ion-spinner mode="ios" name="bubbles" color="dark" *ngIf="!results"></ion-spinner>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content mode="ios" class="ion-padding">
+  
+    <div> 
+          <ion-list lines="none">
+  
+            <ion-item mode="ios">
+             <small>Nomber of students they give their feedbacks.</small><ion-badge mode="ios" color="danger" slot="start">{{starsResult.voters}} </ion-badge> 
+            </ion-item>
+            <ion-item mode="ios" *ngFor="let result of results">
+              <ion-label mode="ios"><b>{{result.id}}. {{result.name}}</b>: 
+                <p><ion-text color="medium">{{result.question}}</ion-text></p>
+                <h1><ionic4-star-rating
+                    rating = "{{result.moy}}"  
+                    activeIcon = "ios-star"
+                    activeColor = "#fed330"
+                    defaultIcon ="ios-star-outline" 
+                    defaultColor = "#aaaaaa"
+                    readonly = "true"
+                    halfStar ="true"
+                    halfIcon="ios-star-half"
+                    fontSize= "20px"
+                > 
+                </ionic4-star-rating></h1>   
+              </ion-label>
+              <ion-badge mode="ios" color="tertiary" slot="end">Total:  <ion-note mode="ios" color="light">{{result.total}}</ion-note></ion-badge>
+            </ion-item>
+  
+          </ion-list>    
+  </div>
+  </ion-content>
+  

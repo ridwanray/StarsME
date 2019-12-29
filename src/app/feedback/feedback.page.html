@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar mode="ios" color="light">
+      <ion-title mode="ios">Feedback</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content mode="ios" fullscreen class="ion-padding">
+  
+  <form [formGroup]="feedbackForm">
+  
+      <ion-list lines="none">
+
+      <ion-list-header>
+        <h1>Please answer the questions below.</h1>
+      </ion-list-header>
+
+    <ion-item mode="ios" *ngFor="let quality of qualities$ | async ">
+        <ion-label mode="ios">
+        <h3>{{quality.id}}. {{quality.question}}:</h3>
+        <p><ionic4-star-rating
+            activeIcon = "ios-star"
+            defaultIcon ="ios-star-outline" 
+            activeColor = "#fed330"
+            defaultColor = "#aaaaaa"
+            readonly = "false"
+            formControlName="{{quality.name}}">
+        </ionic4-star-rating></p>
+      </ion-label>
+      </ion-item>
+
+         <ion-button expand="block" [disabled]="studentVote" (click)="sendFeedback()" mode="ios" shape="round" color="primary"><ion-icon name="ios-send" slot="end"></ion-icon>Send</ion-button>
+         <ion-button expand="block" (click)="back()" mode="ios" fill="clear" color='primary'> Back </ion-button>  
+      </ion-list>
+     
+  </form>
+  
+  </ion-content>

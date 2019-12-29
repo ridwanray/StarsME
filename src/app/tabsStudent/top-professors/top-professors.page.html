@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar mode="ios" color="light">
+      <ion-title mode="ios">Top Professors</ion-title>
+      <ion-buttons mode="ios" slot="end">
+        <ion-spinner mode="ios" color="danger" *ngIf="!(professors$ | async)"></ion-spinner>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<!-- Loadiing -->
+<ion-content *ngIf="!(professors$ | async)" class="ion-padding"> 
+  <ion-item >
+    <ion-label color='warning'>
+      <h5>Loading...</h5>
+    </ion-label>
+  </ion-item>
+</ion-content>
+
+  <ion-content *ngIf="professors$ | async as professors" mode="ios" fullscreen class="ion-padding">
+
+      <ion-item *ngIf="professors && professors.length == 0">
+          <ion-label color='danger'>
+            <h5>No top professors are availables.</h5>
+          </ion-label>
+      </ion-item>
+
+
+  <ion-list mode="ios" *ngIf="professors && professors.length > 0">
+       
+    <div *ngFor="let professor of professors">
+      <ion-item mode="ios" *ngIf="professor.totalStars">
+        <ion-badge mode="ios"color="tertiary" slot="end">Total: <ion-note mode="ios" color="light">{{professor.totalStars}}</ion-note></ion-badge>
+        <ion-thumbnail mode="ios" *ngIf="!professor.picture" slot="start">
+          <ion-img src="/assets/img/thumbs/user-default.png"></ion-img>
+        </ion-thumbnail>
+
+        <ion-thumbnail mode="ios" *ngIf="professor.picture" slot="start">
+          <ion-img src="{{professor.picture}}"></ion-img>
+        </ion-thumbnail>
+        <ion-label mode="ios">
+          <h1>{{professor.name}}</h1>
+          <p *ngIf="professor.aboutMe">{{professor.aboutMe}}</p>
+        </ion-label>
+      </ion-item> 
+    </div>
+
+    </ion-list>
+  </ion-content>

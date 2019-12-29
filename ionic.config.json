@@ -1,0 +1,7 @@
+{
+  "name": "stars-me",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

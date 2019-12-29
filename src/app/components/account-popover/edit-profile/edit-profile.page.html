@@ -1,0 +1,66 @@
+<ion-header mode="ios" translucent>
+  <ion-toolbar mode="ios" color="light">
+    <ion-title mode="ios">Edit Profile</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content mode="ios" fullscreen class="ion-padding">
+
+<form [formGroup]="updateFrom">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Display Name:</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Email:</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+
+    <ion-grid>    
+
+    <ion-row>
+      <ion-col>
+      <ion-item>
+          <ion-label position="floating">Telephone:</ion-label>
+          <ion-input type="tel" formControlName="tel"></ion-input>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+          <ion-label position="floating">Address:</ion-label>
+          <ion-input type="text" formControlName="address"></ion-input>
+      </ion-item>
+      </ion-col>
+      </ion-row>
+
+     <ion-row>
+        <ion-col>
+       <ion-item>
+          <ion-label position="floating">About Me:</ion-label>
+          <ion-textarea autocapitalize spellcheck="true" formControlName="aboutMe" rows="5"></ion-textarea>
+        </ion-item>
+        </ion-col>
+     </ion-row>
+
+     <ion-row>
+       
+       <ion-col>
+          <ion-button  expand="block" [disabled]="!updateFrom.dirty" shape="round" (click)='update()' mode="ios" color="primary"><ion-icon slot="end" name="create"></ion-icon>Edit</ion-button>
+          <ion-button expand="block" (click)='close()' mode="ios" color="primary" fill="clear">Back</ion-button>
+        </ion-col>
+        
+      </ion-row>
+      </ion-grid>
+      
+    </ion-list>
+  
+</form>
+
+</ion-content>
+

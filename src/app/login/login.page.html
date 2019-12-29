@@ -1,0 +1,43 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="light">
+    <ion-title mode="ios">Log In</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content mode="ios" fullscreen class="ion-padding">
+
+   <ion-fab horizontal="end" vertical="top" edge slot="fixed">
+        <ion-fab-button color="dark" mode="ios">
+            <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list>
+          <ion-fab-button mode="ios" (click)="siginWithGoogle()" color="danger"><ion-icon name="logo-googleplus"></ion-icon></ion-fab-button>
+          <ion-fab-button mode="ios" (click)="siginWithFacebook()" color="primary"><ion-icon  name="logo-facebook"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+
+  <form [formGroup]="loginForm" class="center">
+
+    <ion-list mode="ios" lines="none">
+      <ion-item>
+        <ion-label position="floating"> Email:<ion-text mode="ios" color="danger"> *</ion-text></ion-label>
+        <ion-input formControlName="email" clear-input="true" type="email" placeholder="Email..."></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> Password:<ion-text mode="ios" color="danger"> *</ion-text></ion-label>
+        <ion-input formControlName="password" clear-input="true" type="password" placeholder="Password..."></ion-input>
+      </ion-item>
+      <br>
+      <ion-button expand="block"  mode="ios"  (click)="sigin()" [disabled]="!loginForm.valid" shape="round" color="primary"><ion-icon slot="end" name="ios-log-in"></ion-icon>Log In</ion-button>
+      <ion-button expand="block"  mode="ios" routerLink="/register" fill="clear" color="primary">New Account ?</ion-button> 
+      </ion-list>
+           
+  </form>
+        
+
+</ion-content>

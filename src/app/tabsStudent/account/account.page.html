@@ -1,0 +1,46 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="light">
+    <ion-title mode="ios">Account</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="showSettings($event)" color="dark">
+        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" fullscreen class="ion-padding">
+
+        <img *ngIf="!user.picture" src="assets/img/headers/user-default.png">
+        <img *ngIf="user.picture" src="{{user.picture}}">
+                       
+        <ion-list mode="ios">
+
+          <ion-list-header>
+            <ion-label color="medium" mode="ios">Personal Informations </ion-label>
+          </ion-list-header>
+
+          <ion-item *ngIf="user.aboutMe" lines="none" mode="ios"> 
+              <ion-note color='medium'>{{user.aboutMe}}</ion-note>
+          </ion-item>
+          
+          <ion-item lines="none" mode="ios"> 
+            <b>Name</b>: &nbsp; {{user.name}}
+          </ion-item>
+
+            <ion-item *ngIf="user.email" lines="none" mode="ios"> 
+              <b>Email</b>: &nbsp;{{user.email}}
+          </ion-item>
+
+            <ion-item *ngIf="user.tel" lines="none"> 
+                    <b>Tel</b>: &nbsp;{{user.tel}}
+            </ion-item>
+            <ion-item *ngIf="user.address" lines="none"> 
+                  <b>Address</b>: &nbsp;{{user.address }}
+            </ion-item>
+
+        </ion-list>        
+</ion-content>

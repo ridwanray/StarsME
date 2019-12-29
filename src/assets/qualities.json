@@ -1,0 +1,45 @@
+[
+    {
+        "id" : 1, 
+        "question" : "They treat you as a friend, not just a student",
+        "name" : "Friendly",
+        "image" : "friendly.jpg",
+        "description" : "The difference between feeling like a mere annoyance talking to a seemingly-superior professor that talks to you like a machine on a phone, and talking to one that you can relate to and feel comfortable talking about anything with, is tremendous. It can completely alter your attitude towards the class, boost your confidence, create a better learning environment, and leave you with a good reflection of the overall class. When I first had certain teachers that were comfortable enough with students to treat us as friends, and tell us their life stories, give us advice, and sometimes even talking about wanting to take us on a hike as a class, I thought it was of utmost unordinary. However, I soon realized how great it makes the class. This quality of a teacher makes everyone within it feel more whole, comfortable, and happy. Professors can be serious and fun."
+    },
+    {
+        "id" : 2,
+        "question" : "Treat everyone equally",
+        "name" :  "Equality",
+        "image": "equality.jpg",
+        "description": "When a professor makes you feel as if you are incompetent because you didn't catch a certain phrase or reminder in a series of hundreds of other things said, it's a horrible feeling. It's also not so pleasant when a teacher always calls on the Hermione Granger of the class, without giving shyer students that raise their hand a chance to speak. A great professor should treat everyone equally, give everyone the same chance, and never prioritize a student over another for any reason. Every student, especially those that sit in the back and sulk their head as if they have no confidence, should be encouraged."
+    },
+
+    { 
+        "id":3,
+        "question" : "Have a sense of humor",
+        "name" : "Humour",
+        "image": "humor.jpg",
+        "description" : "While this isn't a necessary trait, it certainly boosts the enjoyability of the class, and turns complex or boring content into more exciting ones. I love professors that have a sense of humor, especially if they're able to create humor out of a very bland topic to teach. Of course, being too humorous isn't always good when it's tied to a hard-to-grasp subject. Humor can be great to a degree, otherwise. Even if it's simply a professor that doesn't mind eating a poptart in class, talking about ridiculous trends on social media to connect with us, or making fun of Pokemon Go, I always love when a professor doesn't mind showing the funny side of them and expressing themselves. A good laugh in class can be following up with an open mind and better attitude to take in a subsequent long lecture."
+    },{
+        "id" :4,
+        "question" : "They don't over-expect; they understand you",
+        "name" :"Understand",
+        "image" : "understand.jpg",
+        "description": "The great kind of teachers expect the best from you, but don't expect too much from you. A teacher I once had for a morning class understood the difficulties some of us have with getting up in the morning. Moreover, she understood that sometimes 'life happens,' as she stated, and that things tend to naturally happen that are out of our control, and obstruct our schedule. In other words, she was lenient about us coming late to class once or twice. She has us text her if we were going to be late, but nevertheless she tried to understand us the best we could. She tried to offer alternative assignments or ways of learning if some of us weren't visual learners, or great at learning in other forms, and was always offering her best advice if we ever needed it. That teacher was kind enough to listen to a student in distress one class, for as long as they needed until the student could focus on their work again. To me, and the whole class, she was a teacher, counselor, mentor, and a great friend. The best teachers realize that we can't be perfect students, even if we try as hard as we can--they think on our level to incorporate teaching in better ways. They focus on offering as much help as they can outside of how much most professors are expected to help."
+    },
+    {
+        "id" : 5,
+        "question" : "They stick to their word",
+        "name" :"Honest",
+        "image" : "honest.jpg",
+        "description": " cannot express how disappointed I have felt when I did an assignment, one of which I put a lot of thought and work into, double checked to make sure I brought it to class the next day, only to feel my face sink when the professor said they'll just collect them the next class as if they forgot. This has usually been the case for me with daily journals, or any other almost annual assignment. While it may seem as though they're doing some of the class a favor, they are actually devaluing the assignments, and the work students put into them, making them less obligated to keep up good work habits towards the class, or and obstructing them from working even harder in the future. The best kind of professors stick to their word, and make each task feel rewarding to the student. Never leave any student feeling like they put in a wasted effort."
+    }, 
+    {
+        "id" : 6,
+        "question": "They're open to change",
+        "name": "Change",
+        "image": "change.jpg",
+        "description": "Professors are there to answer your questions about the class. Chances are that if you have one, and you were paying attention, the professor might not have made something clear enough. But they don't always realize this.I have had only a few teachers in my life that truly realized there was always something they could improve on as a professor. They did not get insulted when someone told them group projects were not a good approach to a certain project, or that they didn't make something clear enough. I've had teachers admit they were wrong, as each one is bound to make a mistake at least once. But instead of blaming the class, when they did not emphasize that we have to do something enough. Some of these said teachers even let us vote on due dates,if we did or did not like a strategy of the class, and if we wanted something to be changed. I really admire these teachers, and they make for a great professor just like a student does; both open to how they can build themselves, and recognize that they're not perfect.There is no such thing as a perfect professor, but one that's as good as they can be is an essential to all aspects of a class. A great professor can make you enjoy content you don't particularly like, they can bring you more confidence in the class, change and expand your perspective on what you already know, and make your overall college experience more enjoyable . After all, they are one of the big parts of the class that motivate us, and either feed our drives, or demotivate us. Lastly, a good professor is made by good students, so it isn't just their duty to be a great professor, but it's also yours to help get them there. Students and teachers correspond to one another in that way, both playing important roles to build one another in different forms. Be a good student, and you will help build great professors. If you don't appreciate them now, you will when you don't have them anymore."
+
+    }
+]

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="light">
+    <ion-title>Quality Details</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<h1 *ngIf="!quality">
+  No quality details available 
+</h1>
+
+<ion-content *ngIf="quality" class="ion-padding">
+  
+      <img src="assets/img/headers/{{quality.image}}">
+   
+          <h1>{{quality.question}}.</h1>
+          <h3>{{quality.name}} </h3>
+          <ion-note>{{quality.description}}</ion-note>
+  
+</ion-content>

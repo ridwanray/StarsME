@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar mode="ios" color="light">
+      <ion-title mode="ios">Qualities</ion-title>
+      <ion-buttons mode="ios" slot="end">
+        <ion-spinner mode="ios" color="danger" *ngIf="!(qualities$ | async)"></ion-spinner>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content *ngIf="!(qualities$ | async)" mode="ios" fullscreen class="ion-padding">
+        <ion-item >
+            <ion-label color='warning'>
+              <h5>Loading...</h5>
+            </ion-label>
+        </ion-item>      
+  </ion-content>
+
+  <ion-content *ngIf="qualities$ | async as qualities" mode="ios" fullscreen class="ion-padding">
+
+
+      <ion-item *ngIf="qualities && qualities.length === 0">
+          <ion-label color='danger'>
+            <h5>No professors are availables.</h5>
+          </ion-label>
+      </ion-item>
+  
+    <ion-list mode="ios" *ngIf="qualities && qualities.length > 0">
+
+    <ion-list-header>
+      Students will give their feedbacks based on the following qualities.
+    </ion-list-header>  
+    <!-- async unwarp [object] [object] -->
+   
+    <!-- users.key !== uid: exculeed the logging in  user  -->
+    <ion-item-sliding *ngFor="let quality of qualities"> 
+
+      <ion-item detail="true" mode="ios">
+          <ion-thumbnail mode="ios" slot="start">
+          <img src="/assets/img/thumbs/{{quality.image}}">
+          </ion-thumbnail>
+        <ion-label mode="ios">
+          <h2>{{quality.name}}</h2>
+          <p>{{quality.question}}</p>
+          <small>{{quality.description}}</small>
+        </ion-label>
+      </ion-item> 
+
+        <ion-item-options side="end">
+          <ion-item-option mode="ios" color="tertiary" (click)="qualityDetail(quality)"><ion-icon size="large" slot="end" name="book"></ion-icon>Read More</ion-item-option>
+        </ion-item-options>
+
+   </ion-item-sliding> 
+
+    </ion-list>
+  </ion-content>
+  

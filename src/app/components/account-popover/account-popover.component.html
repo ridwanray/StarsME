@@ -1,0 +1,35 @@
+<ion-content mode="ios" class="ion-padding">
+
+<ion-list mode="ios">
+
+<ion-list-header>
+  Settings
+</ion-list-header>
+
+  <ion-item (click)='update()' lines="none" button>
+    <ion-icon name="ios-image" slot="start">
+    </ion-icon>
+    Update Picture
+  </ion-item>
+
+  <ion-item (click)='doModol(user)' lines="none" button>
+      <ion-icon name="create" slot="start">
+      </ion-icon>
+      Edit Profile 
+    </ion-item>
+  
+  <ion-item (click)='logout()' lines="none" button>
+      <ion-icon name="ios-log-out" slot="start">
+      </ion-icon>
+      Log Out
+  </ion-item>
+
+  <ion-item (click)='close()' lines="none" button>
+      <ion-icon name="close-circle" slot="start">
+      </ion-icon>
+      Close
+  </ion-item>
+ 
+</ion-list>
+
+</ion-content>

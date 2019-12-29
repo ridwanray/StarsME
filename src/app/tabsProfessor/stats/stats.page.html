@@ -1,0 +1,31 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color='light'>
+    <ion-title mode="ios">Stats</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" class="ion-padding" fullscreen>
+
+    <ion-item *ngIf="starsResult.voters == 0">
+        <ion-label color='danger'>
+          <h5>You have 0 voters.</h5>
+        </ion-label>
+    </ion-item>
+
+    <div *ngIf="starsResult.voters > 0" [chart] ="barChart" style="width: 100%; display: block;"></div>
+    <div *ngIf="starsResult.voters > 0" [chart] ="pieChart" style="width: 100%; display: block;"></div>
+
+</ion-content>
+
+<!-- 
+<highcharts-chart 
+  [Highcharts]="highcharts"
+  [options]="chartOptions"
+  [oneToOne]="oneToOneFlag"
+  style="width: 100%;display: block; margin: 0%; padding: 0%" 
+></highcharts-chart>
+-->
+

@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="light">
+    <ion-title mode="ios">Professors</ion-title>
+    <ion-buttons mode="ios" slot="end">
+      <ion-spinner mode="ios" color="danger" *ngIf="!professors"></ion-spinner>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="light">
+    <ion-searchbar mode="ios" (ionInput)="search($event)" animated="true" autocomplete="true" placeholder="Search for professor..." autocorrect="true"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Loadiing -->
+<ion-content *ngIf="!professors" class="ion-padding"> 
+    <ion-item >
+      <ion-label color='warning'>
+        <h5>Loading...</h5>
+      </ion-label>
+    </ion-item>
+</ion-content>
+
+<ion-content *ngIf="professors" class="ion-padding">
+
+    <ion-item *ngIf="professors && professors.length === 0">
+        <ion-label color='danger'>
+          <h5>No professors are availables.</h5>
+        </ion-label>
+    </ion-item>
+  
+  <ion-list mode="ios" *ngIf="!isfiltered && professors.length > 0">
+
+    <ion-item-sliding *ngFor="let professor of professors">
+
+    <ion-item detail="true">
+
+        <ion-thumbnail *ngIf="!professor.picture" slot="start">
+            <ion-img src="/assets/img/thumbs/user-default.png"></ion-img>
+        </ion-thumbnail>
+
+      <ion-thumbnail *ngIf="professor.picture" slot="start">
+          <ion-img src="{{professor.picture}}"></ion-img>
+      </ion-thumbnail>
+
+      <ion-label mode="ios">
+        <h2>{{professor.name}}</h2>
+        <p>{{professor.email}}</p>
+        <ion-note color="medium" *ngIf="professor.aboutMe">{{professor.aboutMe}}</ion-note>
+      </ion-label>
+    </ion-item> 
+
+        <ion-item-options side="end">
+            <ion-item-option mode="ios" color="danger" (click)="sendEmail(professor)"><ion-icon size="large" slot="end" name="mail"></ion-icon>Send Email</ion-item-option>
+            <ion-item-option mode="ios" color="tertiary" (click)="giveFeedback(professor)"><ion-icon size="large" slot="end" name="checkbox"></ion-icon>Give Feedback</ion-item-option>
+        </ion-item-options>
+
+
+      </ion-item-sliding>  
+
+  </ion-list>
+
+  <ion-list mode="ios" *ngIf="isfiltered">
+
+    <ion-item-sliding *ngFor="let professor of filteredProfessors">
+
+    <ion-item detail="true">
+
+        <ion-thumbnail *ngIf="!professor.picture" slot="start">
+            <ion-img src="/assets/img/thumbs/user-default.png"></ion-img>
+        </ion-thumbnail>
+
+      <ion-thumbnail *ngIf="professor.picture" slot="start">
+          <ion-img src="{{professor.picture}}"></ion-img>
+      </ion-thumbnail>
+
+      <ion-label mode="ios">
+        <h2>{{professor.name}}</h2>
+        <p>{{professor.email}}</p>
+        <ion-note color="medium" *ngIf="professor.aboutMe">{{professor.aboutMe}}</ion-note>
+      </ion-label>
+    </ion-item> 
+
+    <ion-item-options side="end">
+        <ion-item-option mode="ios" color="danger" (click)="sendEmail(professor)"><ion-icon size="large" slot="end" name="mail"></ion-icon>Send Email</ion-item-option>
+        <ion-item-option mode="ios" color="tertiary" (click)="giveFeedback(professor)"><ion-icon size="large" slot="end" name="checkbox"></ion-icon>Give Feedback</ion-item-option>
+    </ion-item-options>
+
+      </ion-item-sliding>  
+
+  </ion-list>
+
+
+
+
+</ion-content>

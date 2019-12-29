@@ -1,0 +1,43 @@
+<ion-header mode="ios" translucent>
+  <ion-toolbar mode="ios" color="light">
+    <ion-title mode="ios">Register</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button text="" name="arrow-round-back"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content mode="ios" fullscreen class="ion-padding">
+
+<form [formGroup]="registerForm">
+
+       <ion-list lines="none">
+
+      <ion-item>
+        <ion-label position="floating">Display Name:<ion-text mode="ios" color="danger"> *</ion-text></ion-label>
+        <ion-input formControlName="name" type="text" clear-input="true" placeholder="Display Name..."></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label  position="floating">Email:<ion-text color="danger"> *</ion-text> </ion-label>
+          <ion-input  formControlName="email" type="email" clear-input="true" placeholder="Email..."></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Password: <ion-text color="danger"> *</ion-text></ion-label>
+          <ion-input type="password" formControlName="password" placeholder="Password..."></ion-input>
+      </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>Professor ? </ion-label>
+          <ion-toggle checked="false" mode="ios" formControlName="role" color="dark" slot="start"></ion-toggle>
+        </ion-item>
+        <br>
+
+        <ion-button expand="block" mode="ios" [disabled]="!registerForm.valid" (click)="createAccount()" color="primary" shape="round"><ion-icon slot="end" name="ios-person-add"></ion-icon>Create</ion-button>
+        <ion-button expand="block" mode="ios" routerLink="/login" color="primary" fill="clear"> Log In </ion-button>
+      
+    </ion-list>
+
+</form>
+
+</ion-content>
