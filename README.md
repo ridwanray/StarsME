@@ -1,20 +1,112 @@
 # StarsME
 
-**Ionic4 App that allows you to give feedback to professors**.
+**Ionic 4 App that allows you to give feedback to professors**.
 
-Ionic 4 app that allows students give their feedbacks to professors based on 6 qualities (Friendly, Equality, Humor, Understand, Honest, Change).
+:star2: StarsME is firebase-based :fire: mobile application :iphone: that allows students :mortar_board:  give their feedback to professors based on :six: qualities (Friendly, Equality, Humor, Understand, Honest, Change) :star2:.
+
+---
 
 ## Screenshots 
 
 <img src="img/stats.png" alt="stats" width="33%"/><img src="img/stars.png" width="33%" alt="stars"/><img src="img/profs.png" width="33%"/>
 
-## Android Setup 
+## What is Firebase ?
 
-To target the Android platform, some setups is required.
+> Firebase is a Backend as a service **Baas** by <mark>Google</mark>, Firebase provides a real-time backend for various kinds of applications it provides: 
+-[x] data store
+-[x] authentication
+-[x] static hosting
 
-1. install **Java**: native Android apps complied with Java.
-2. install **Gradle**: the build tool used in Android Apps and must be installed speratly.
-3. install **Android Studio**: the IDE for creation native Android apps it includes Android SDK, which will need to be configured for us in the command line.
+## Defining our app 
+
+In this section, we will define our application structure and architecture.
+
+### 1. Functionalites & Features 
+
+Our app includes the following features: 
+
+* E-mail password authentication + Social Media autentication (**Google**, **Facebook**).
+ * **Student Feature**:
+  1. A list of all Professors of the application + search for a specfic Professor.
+   * Send Email.
+   - Give feedback. 
+  2. List of top professors.
+  3. Account: 
+   - Change profile picture
+   - Edit personal info.
+   - Logout.
+ * **Professor Feature**:
+  1. List of 6 Qualites
+   - Read more. 
+  2. Stars stats.
+  3. 3D charts.
+  4. Account: 
+   - Change profile picture
+   - Edit personal info
+   - Logout
+
+### App workflow
+
+How the app works and goes form one page to another page ?
+
+<img src="/img/workflow.png" width="100%">
+
+### Firebase Firestore Data Structure
+
+> **Cloud Firestore** is a cloud-hosted, NoSQL database, Cloud Firestore's NoSQL data model allows you store data in documents that contain fields mapping to values. These documents are stored in collections, which are containers for your documents that you can use to organize your data and build queries. 
+
+<img src="/img/structure-data.pn">
+
+####  professors Collection
+
+``` json
+"professors": [{
+    "professorID": {
+            "name": "Ahmed Nouira",
+            "email": "ahmnouira@gmail.com",
+            "picture": "user's base64 encode picture",
+            "tel" : "24272897",
+            "address": "",
+            "abouMe" :"",
+            "created_at": 1577991867.945,
+            "totalStars" : 23,
+            "notes": [{
+                "studentID" : {
+                    "Change": 4,
+                    "Equality": 3,
+                    "Friendly": 1,
+                    "Honest": 2,
+                    "Humour": 0,
+                    "Undestand": 5,
+                    "created_at": 1579042961325,
+                    "updated_at": 1579042961325
+                }
+            }] 
+        }
+    },
+
+    ]
+```
+### students Collection
+``` json 
+"students": [{
+    "studentID" : {
+        "name": "et1",
+        "email": "et1@example.com",
+        "tel": "",
+        "address":"",
+        "aboutMe" :"",
+        "created_at": 1579030198.077
+    }
+}, 
+
+] 
+
+```
+
+## Setting up
+
+Before we can acually start working on the our app, we need the following software tools and libraires to get started.
 
 ### Run as Angular App 
 
@@ -28,6 +120,15 @@ To target the Android platform, some setups is required.
 * `ionic serve --lab` 
 
 <img src="img/lab.png" alt="lab" width="100%"/>
+
+
+### Android Setup 
+
+To target the Android platform, some setups is required.
+
+1. install **Java**: native Android apps complied with Java.
+2. install **Gradle**: the build tool used in Android Apps and must be installed speratly.
+3. install **Android Studio**: the IDE for creation native Android apps it includes Android SDK, which will need to be configured for us in the command line.
 
 ### Run as an Android App 
 
