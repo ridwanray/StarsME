@@ -32,18 +32,18 @@ Our app includes the following features:
        2. Give feedback. 
     2. List of top professors.
     3. Account: 
-       1. Change profile picture
+       1. Change profile picture.
        2. Edit personal info.
        3. Logout.
   * **Professor Feature**:
-    1. List of 6 Qualites
+    1. List of 6 Qualites.
     2. Read more. 
     3. Stars stats.
     3. 3D charts.
     4. Account: 
-       1. Change profile picture
-       2. Edit personal info
-       3. Logout
+       1. Change profile picture.
+       2. Edit personal info.
+       3. Logout.
 
 ### 2. App workflow
 
@@ -55,7 +55,7 @@ How the app works and goes form one page to another page ?
 
 > **Cloud Firestore** is a cloud-hosted, NoSQL database, Cloud Firestore's NoSQL data model allows you store data in documents that contain fields mapping to values. These documents are stored in collections, which are containers for your documents that you can use to organize your data and build queries. 
 
-<img src="/img/sstructure-data.png">
+<img src="/img/structure-data.png">
 
 #### 3.1  professors Collection
 
@@ -121,7 +121,7 @@ Before we can acually start working on the our app, we need the following softwa
 
 <img src="img/lab.png" alt="lab" width="100%"/>
 
-#### Android Setup 
+#### 3. Android Setup 
 
 To target the Android platform, some setups is required.
 
@@ -129,7 +129,7 @@ To target the Android platform, some setups is required.
 2. install **Gradle**: the build tool used in Android Apps and must be installed speratly.
 3. install **Android Studio**: the IDE for creation native Android apps it includes Android SDK, which will need to be configured for us in the command line.
 
-####  Run as an Android App 
+#### 4. Run as an Android App 
 
 1. run `cordova-res android` to generate _icons_ and _splashs_ images for android.
 2. run `cordova platform add android` add android *platform*, *plugins* used for this app.
@@ -137,20 +137,20 @@ To target the Android platform, some setups is required.
 
 **Note**: the .apk file is located in`StarsME/platforms/android/app/build/outputs/apk/debug/app-debug.apk`
 
-#### Publishing as Progressive Web Application (PWA) 
+#### 5. Publishing as Progressive Web Application (PWA) 
 
 * Because ionic apps built with web technologies, they can run just as well as progressive web app as they can a native app.
 
 1. `ng add @angular/pwa` add **@angular/service-worker** pacakge and enable service-workers.
 2. `ionic build --prod` to build optimazed version of the app.
 
-####  Test the your build project
+#### 6. Test the your build project
 
 * `ng serve` does not work with _service workers_ you must use a seperate HTTP server to test your project **locally**.
 
 run `npx http-server -p 8080 -c-1 www/` to see the service.
 
-#### Firebase Hosting Deploying 
+#### 7. Firebase Hosting Deploying 
 
 1. run ` cd functions/ && npm i && cd ..` to install dependencies for *functions/* folder.
 2. `ionic build --prod` to build optimazed version of the app.
